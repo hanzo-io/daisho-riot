@@ -4,7 +4,7 @@ placeholder = require '../utils/placeholder'
 module.exports = class Text extends Control
   tag:  'text-control'
   type: 'text'
-  html: require '../templates/text.html'
+  html: require '../../templates/text.html'
   formElement: 'input'
   init: ()->
     super
