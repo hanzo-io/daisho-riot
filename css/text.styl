@@ -1,0 +1,48 @@
+inputcolor  = #606060
+accentcolor = #252525
+
+//
+// Text Control:
+// 'text-control' - Daisho's Default Material-esque Text Input
+//
+//  @example
+//  text-control
+//      input(value="Value")
+//      label
+//          Field
+//
+//
+
+text-control
+  height: 4em
+  margin: 1em 0
+  position: relative
+  width: 100%
+  display: block
+
+  input
+  label
+    cursor: text
+    font-size: 1em
+    padding: 1.6em 0 0.6em 0em
+    position: absolute
+    transition: all 0.15s ease
+    width: 100%
+
+  input
+    color: inputcolor
+    border: 0
+    border-bottom: solid accentcolor 1px
+    outline: none
+    -webkit-box-shadow: 0 0 0px 1000px white inset
+
+    &.filled ~ label
+    &:focus ~ label
+      font-size: 0.7em
+      position: absolute
+      padding-top: .3em
+
+  label
+    color: accentcolor
+    padding: 1.5em 0
+

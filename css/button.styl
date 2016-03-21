@@ -1,0 +1,41 @@
+darkcolor = #252525
+disabledcolor = #CECECE
+
+//
+// Buttons:
+// 'button, .button' - Daisho's Default Material-esque Button
+//
+//  @example
+//  button
+//      Button Tag
+//
+//  .button
+//      Button Div
+//
+//  button(disabled="disabled")
+//      Disabled Button Tag
+//
+//  .button(class="disabled)
+//      Disabled Button Div
+//
+
+button
+.button
+  background-color: darkcolor
+  border: 0
+  color: white
+  padding: .5em 1em
+  box-shadow: .1em .1em 1em #888
+  outline: none
+  transition: all .5s ease;
+
+  &.disabled
+  &:disabled
+    background-color: white
+    border: 1px solid disabledcolor
+    color: disabledcolor
+    box-shadow: none
+
+  &:hover
+    box-shadow: .1em .5em 1em #888
+

@@ -1,5 +1,5 @@
 Control = require './control'
-placeholder = require '../utils/placeholder'
+# placeholder = require '../utils/placeholder'
 
 module.exports = class Text extends Control
   tag:  'text-control'
@@ -14,5 +14,5 @@ module.exports = class Text extends Control
     @on 'updated', =>
       el = @root.getElementsByTagName(@formElement)[0]
 
-      if @type != 'password'
-        placeholder el
+      # if @type != 'password'
+      #   placeholder el

@@ -1,3 +1,2 @@
-<input id="{ input.name }" name="{ name || input.name }" type="{ type }" onchange="{ change }" onblur="{ change }" value="{ input.ref(input.name) }" placeholder="{ placeholder }">
-<yield></yield>
-
+<input id="{ input.name }" name="{ name || input.name }" type="{ type }" class="{ filled: input.ref(input.name) }" onchange="{ change }" onblur="{ change }" value="{ input.ref(input.name) }">
+<label for="{ input.name }">{ placeholder }</label>

@@ -47,8 +47,8 @@ module.exports =
       rupture      = require 'rupture'
       stylus       = require 'stylus'
 
-      src = 'example/css/main.styl'
-      dst = 'example/css/main.css'
+      src = 'css/main.styl'
+      dst = 'main.css'
 
       style = stylus fs.readFileSync src, 'utf8'
         .set 'filename', src
