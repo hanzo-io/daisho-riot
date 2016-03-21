@@ -4,7 +4,8 @@
   "description": "riot component for daisho",
   "main": "lib/",
   "scripts": {
-    "test": "cake test"
+    "prepublish": "cake build-min",
+    "test": "cake build && cake test"
   },
   "repository": {
     "type": "git",
