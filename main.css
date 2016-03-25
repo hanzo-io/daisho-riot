@@ -1,5 +1,5 @@
 text-control{
-  height:3em;
+  height:4em;
   margin:1em 0;
   position:relative;
   width:100%;
@@ -31,4 +31,28 @@ text-control input:focus ~ label{
 text-control label{
   color:#252525;
   padding:1.5em 0;
+}
+button,
+.button{
+  background-color:#252525;
+  border:0;
+  color:#fff;
+  padding:0.5em 1em;
+  box-shadow:0.1em 0.1em 1em #888;
+  outline:none;
+  -webkit-transition:all 0.5s ease;
+  transition:all 0.5s ease;
+}
+button.disabled,
+.button.disabled,
+button:disabled,
+.button:disabled{
+  background-color:#fff;
+  border:1px solid #cecece;
+  color:#cecece;
+  box-shadow:none;
+}
+button:hover,
+.button:hover{
+  box-shadow:0.1em 0.3em 1em #888;
 }/*# sourceMappingURL=main.css.map */
