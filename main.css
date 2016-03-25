@@ -20,7 +20,7 @@ text-control input{
   border:0;
   border-bottom:solid #252525 1px;
   outline:none;
-  -webkit-box-shadow:0 0 0px 1000px #fff inset;
+  box-shadow:0 0 0px 1000px #fff inset;
 }
 text-control input.filled ~ label,
 text-control input:focus ~ label{
@@ -38,7 +38,7 @@ button,
   border:0;
   color:#fff;
   padding:0.5em 1em;
-  box-shadow:0.1em 0.1em 1em #888;
+  box-shadow:0.1em 0.1em 1em rgba(0,0,0,0.7);
   outline:none;
   -webkit-transition:all 0.5s ease;
   transition:all 0.5s ease;
@@ -54,5 +54,5 @@ button:disabled,
 }
 button:hover,
 .button:hover{
-  box-shadow:0.1em 0.3em 1em #888;
+  box-shadow:0.1em 0.3em 1em rgba(0,0,0,0.7);
 }/*# sourceMappingURL=main.css.map */
