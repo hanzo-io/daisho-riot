@@ -1,0 +1,9 @@
+<div class="table-head">
+  <div class="table-row table-head">
+    <div each="{ column, i in columns }">{ column.id }</div>
+  </div>
+</div>
+<div class="table-body">
+  <table-row class="table-row" each="{ item, i in data.get('items') }" data="{ data.ref('items.' + i) }" config="{ config }" columns="{ columns }"></table-row>
+</div>
+
