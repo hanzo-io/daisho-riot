@@ -63,6 +63,7 @@
   "dependencies": {
     "crowdcontrol": "2.0.12",
     "raf": "3.2.0",
+    "referential": "0.4.1",
     "riot": "2.3.17"
   }
 }
