@@ -1,4 +1,5 @@
 CrowdControl = require 'crowdcontrol'
+refer = require 'referential'
 
 module.exports = class TableWidget extends CrowdControl.Views.View
   tag: 'table-widget'
@@ -7,24 +8,26 @@ module.exports = class TableWidget extends CrowdControl.Views.View
 
   #
   # Column display data in the form of
-  # [
-  #     {
-  #         id:     'Data Field Id'
-  #         name:   'Name'
-  #     }
-  # ]
   #
-  columns: []
+  columns: refer []
 
   #
   # Data for rendering into rable-row forms
   # {
-  #     meta: { ... meta data about tabular data ... }
+  #     columns: [
+  #         {
+  #             id:     'Data Field Id'
+  #             name:   'Name'
+  #         }
+  #     ]
   #     items: [
   #         { ... some data ... }
   #     ]
+  #     page:   1 // current page
+  #     count:  0 // Total Items
+  #     sort:   'SortString'
   # }
   #
-  data: null
+  data: refer {}
 
   html: require '../../templates/table-widget.html'
