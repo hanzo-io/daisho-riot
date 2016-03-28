@@ -1,5 +1,33 @@
+tableDividerColor       = #CECECE
+tableBackgroundColor    = #FFF
+tablePadding            = 32px
+tableRowHeight          = 50px
+
+//
+// Tables:
+// 'table-widget' - Daisho's Default Table Widget
+//
+//  @example
+//  table-widget
+//      .table-head
+//          .table-row
+//              div th1,1
+//              div th2,1
+//      .table-body
+//          .table-row
+//              div td1,1
+//              div td2,1
+//          .table-row
+//              div td1,2
+//              div td2,2
+//
+
+//
+// Structural
+//
 table-widget
   display: table
+  position: relative
   width: 100%
 
   .table-head
@@ -18,3 +46,75 @@ table-widget
   .table-cell
 
     display: table-cell
+
+//
+// Theming
+//
+table-widget
+  .table-row
+  table-row
+    height: tableRowHeight
+
+    > *
+      position: relative
+      line-height: 3.5em
+
+      &:first-child
+        padding-left: tablePadding
+
+      &:last-child
+        padding-right: tablePadding
+
+  .table-head
+    .table-row
+    table-row
+      height: tableRowHeight + tablePadding
+      > *
+        padding-top: tablePadding
+
+  .table-body
+    &:before
+      content: ''
+      display: block
+      position:absolute
+      width: 100%
+      top: tablePadding + tableRowHeight
+      left: 0
+      bottom: 0
+      right: 0
+      box-shadow: .1em .1em 1em dropShadowColor
+
+    .table-row
+    table-row
+
+      &:first-child
+        > *
+          padding-top: tablePadding
+
+      &:last-child
+        > *
+          padding-bottom: tablePadding
+
+          &:after
+            border-bottom: 0
+
+      > *
+        background-color: tableBackgroundColor
+
+        &:after
+          content: ''
+          display: block
+          width: 100%
+          height: 0
+          position: absolute
+          bottom: 0
+          border-bottom: 1px solid tableDividerColor
+
+        &:first-child:after
+          left: tablePadding
+
+        &:last-child:after
+          right: tablePadding
+
+
+

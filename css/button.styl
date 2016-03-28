@@ -19,13 +19,15 @@ disabledcolor = #CECECE
 //      Disabled Button Div
 //
 
+buttonBoxShadow = rgba(0,0,0,0.5)
+
 button
 .button
   background-color: darkcolor
   border: 0
   color: white
   padding: .5em 1em
-  box-shadow: .1em .1em 1em rgba(0,0,0,0.7)
+  box-shadow: .1em .1em 1em buttonBoxShadow
   outline: none
   transition: all .5s ease;
 
@@ -37,5 +39,5 @@ button
     box-shadow: none
 
   &:hover
-    box-shadow: .1em .3em 1em rgba(0,0,0,0.7)
+    box-shadow: .1em .3em 1em buttonBoxShadow
 

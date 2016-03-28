@@ -38,7 +38,7 @@ button,
   border:0;
   color:#fff;
   padding:0.5em 1em;
-  box-shadow:0.1em 0.1em 1em rgba(0,0,0,0.7);
+  box-shadow:0.1em 0.1em 1em rgba(0,0,0,0.5);
   outline:none;
   -webkit-transition:all 0.5s ease;
   transition:all 0.5s ease;
@@ -54,10 +54,11 @@ button:disabled,
 }
 button:hover,
 .button:hover{
-  box-shadow:0.1em 0.3em 1em rgba(0,0,0,0.7);
+  box-shadow:0.1em 0.3em 1em rgba(0,0,0,0.5);
 }
 table-widget{
   display:table;
+  position:relative;
   width:100%;
 }
 table-widget .table-head{
@@ -75,4 +76,74 @@ table-widget .table-row{
 table-widget .table-row > *,
 table-widget .table-cell{
   display:table-cell;
+}
+table-widget .table-row,
+table-widget table-row{
+  height:50px;
+}
+table-widget .table-row > *,
+table-widget table-row > *{
+  position:relative;
+  line-height:3.5em;
+}
+table-widget .table-row > *:first-child,
+table-widget table-row > *:first-child{
+  padding-left:32px;
+}
+table-widget .table-row > *:last-child,
+table-widget table-row > *:last-child{
+  padding-right:32px;
+}
+table-widget .table-head .table-row,
+table-widget .table-head table-row{
+  height:82px;
+}
+table-widget .table-head .table-row > *,
+table-widget .table-head table-row > *{
+  padding-top:32px;
+}
+table-widget .table-body:before{
+  content:'';
+  display:block;
+  position:absolute;
+  width:100%;
+  top:82px;
+  left:0;
+  bottom:0;
+  right:0;
+  box-shadow:0.1em 0.1em 1em dropShadowColor;
+}
+table-widget .table-body .table-row:first-child > *,
+table-widget .table-body table-row:first-child > *{
+  padding-top:32px;
+}
+table-widget .table-body .table-row:last-child > *,
+table-widget .table-body table-row:last-child > *{
+  padding-bottom:32px;
+}
+table-widget .table-body .table-row:last-child > *:after,
+table-widget .table-body table-row:last-child > *:after{
+  border-bottom:0;
+}
+table-widget .table-body .table-row > *,
+table-widget .table-body table-row > *{
+  background-color:#fff;
+}
+table-widget .table-body .table-row > *:after,
+table-widget .table-body table-row > *:after{
+  content:'';
+  display:block;
+  width:100%;
+  height:0;
+  position:absolute;
+  bottom:0;
+  border-bottom:1px solid #cecece;
+}
+table-widget .table-body .table-row > *:first-child:after,
+table-widget .table-body table-row > *:first-child:after{
+  left:32px;
+}
+table-widget .table-body .table-row > *:last-child:after,
+table-widget .table-body table-row > *:last-child:after{
+  right:32px;
 }/*# sourceMappingURL=main.css.map */
