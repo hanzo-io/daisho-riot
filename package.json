@@ -61,7 +61,7 @@
     "uglify-js": "^2.6.1"
   },
   "dependencies": {
-    "crowdcontrol": "2.0.12",
+    "crowdcontrol": "2.0.13",
     "raf": "3.2.0",
     "riot": "2.3.17"
   }

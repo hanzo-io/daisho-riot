@@ -12,7 +12,8 @@ module.exports = class RiotPage extends Page
     el = document.createElement @tag
     @el.appendChild el
 
-    @tagEl = (riot.mount @tag, @opts)[0]
+    @tagEl = (riot.mount el, @tag, @opts)[0]
+    @tagEl.update()
 
   unload: ()->
     @tagEl.unmount()

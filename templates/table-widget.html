@@ -4,6 +4,6 @@
   </div>
 </div>
 <div class="table-body">
-  <table-row class="table-row" each="{ item, i in data.get('items') }" table-data="{ this.parent.data }" data="{ this.parent.data.ref('items.' + i) }" config="{ this.parent.config }"></table-row>
+  <daisho-table-row class="table-row" each="{ item, i in data.get('items') }" table-data="{ this.parent.data }" data="{ this.parent.data.ref('items.' + i) }" config="{ this.parent.config }"></daisho-table-row>
 </div>
 

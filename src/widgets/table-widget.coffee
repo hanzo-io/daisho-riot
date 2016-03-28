@@ -2,14 +2,9 @@ CrowdControl = require 'crowdcontrol'
 refer = require 'referential'
 
 module.exports = class TableWidget extends CrowdControl.Views.View
-  tag: 'table-widget'
+  tag: 'daisho-table-widget'
   # Config for table-row forms
   configs: []
-
-  #
-  # Column display data in the form of
-  #
-  columns: refer []
 
   #
   # Data for rendering into rable-row forms
@@ -18,6 +13,7 @@ module.exports = class TableWidget extends CrowdControl.Views.View
   #         {
   #             id:     'Data Field Id'
   #             name:   'Name'
+  #             tag:    'Tag to Mount'
   #         }
   #     ]
   #     items: [

@@ -1,7 +1,7 @@
 CrowdControl = require 'crowdcontrol'
 
 module.exports = class TableRow extends CrowdControl.Views.Form
-  tag: 'table-row'
+  tag: 'daisho-table-row'
   # should get this from parent
   configs: null
 

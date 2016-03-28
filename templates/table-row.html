@@ -1,2 +1,4 @@
-<div each="{ column, i in tableData.get('columns') }">{ this.parent.data.get(column.id) }{ console.log(column, this.parent.data.get()) }</div>
+<div each="{ column, i in tableData.get('columns') }">
+  <daisho-poly-control lookup="{ column.id }" tag="{ column.tag }"></daisho-poly-control>
+</div>
 

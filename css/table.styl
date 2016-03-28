@@ -26,7 +26,7 @@ tableRowHeight          = 50px
 //
 // Structural
 //
-table-widget
+daisho-table-widget
   display: table
   position: relative
   width: 100%
@@ -51,9 +51,9 @@ table-widget
 //
 // Theming
 //
-table-widget
+daisho-table-widget
   .table-row
-  table-row
+  daisho-table-row
     height: tableRowHeight
 
     > *
@@ -68,7 +68,7 @@ table-widget
 
   .table-head
     .table-row
-    table-row
+    daisho-table-row
       height: tableRowHeight + tablePadding
       > *
         padding-top: tablePadding
@@ -86,10 +86,11 @@ table-widget
       box-shadow: .1em .1em 1em tableDropShadowColor
 
     .table-row
-    table-row
+    daisho-table-row
 
       &:first-child
         > *
+          height: tableRowHeight + tablePadding
           padding-top: tablePadding
 
       &:last-child
