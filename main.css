@@ -111,7 +111,7 @@ table-widget .table-body:before{
   left:0;
   bottom:0;
   right:0;
-  box-shadow:0.1em 0.1em 1em dropShadowColor;
+  box-shadow:0.1em 0.1em 1em tableDropShadowColor;
 }
 table-widget .table-body .table-row:first-child > *,
 table-widget .table-body table-row:first-child > *{
