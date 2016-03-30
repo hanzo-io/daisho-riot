@@ -1,5 +1,5 @@
 module.exports =
-  TableWidget: require './table-widget'
+  TableWidget: require './table'
 
   register: ()->
     @TableWidget.register()

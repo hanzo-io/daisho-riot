@@ -7,7 +7,7 @@ module.exports =
   Forms:    require './forms'
   Widgets:  require './widgets'
 
-  register: ()->
-    @Controls.register()
+  register: (m)->
+    @Controls.register(m)
     @Forms.register()
     @Widgets.register()

@@ -32,13 +32,16 @@ module.exports = class Control extends CrowdControl.Views.Input
         duration: 500
       )
     @m?.trigger Events.ChangeFailed, @input.name, @input.ref.get @input.name
+    @input.trigger Events.ChangeFailed, @input.name, @input.ref.get @input.name
 
   change: ()->
     super
     @m?.trigger Events.Change, @input.name, @input.ref.get @input.name
+    @input.trigger Events.Change, @input.name, @input.ref.get @input.name
 
   changed: (value)->
     @m?.trigger Events.ChangeSuccess, @input.name, value
+    @input.trigger Events.ChangeSuccess, @input.name, value
     riot.update()
 
   @register: (m)->

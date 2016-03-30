@@ -5,3 +5,6 @@ module.exports =
     'change-success'
   ChangeFailed:
     'change-failed'
+
+  FilterChange:
+    'filter-change'
