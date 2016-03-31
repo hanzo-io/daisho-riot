@@ -1,0 +1,46 @@
+menuSectionHeight   = 60px
+menuItemPadding     = 20px
+
+//
+// Menus:
+// 'daisho-menu-widget' - Daisho's Default Menu Widget
+//
+//  @example
+//  daisho-menu-widget
+//      daisho-inline-text-control
+//      ul
+//          li
+//             | Option 1
+//          li
+//             | Option 2
+//
+
+daisho-menu-widget
+  display: block
+  padding-bottom: 15px
+
+  daisho-inline-text-control
+    height: menuSectionHeight
+    display: block
+    padding: (menuItemPadding - 3px) menuItemPadding
+
+    input
+      width: 100%
+      font-size: 1.2em
+      border: 0
+      outline: none
+
+  > ul
+    overflow-y: scroll
+    list-style: none
+    padding: 0
+    margin: 0
+
+    > li
+      padding: menuItemPadding
+      cursor: pointer
+
+
+
+
+

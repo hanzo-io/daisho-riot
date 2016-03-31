@@ -1,6 +1,13 @@
 CrowdControl = require 'crowdcontrol'
 refer = require 'referential'
 
+filter = (options, filter)->
+  ret = []
+  for option in options
+    ret.push(option) if (option.name.indexOf filter) > -1
+
+  return ret
+
 module.exports = class MenuWidget extends CrowdControl.Views.Form
   tag: 'daisho-menu-widget'
 
@@ -12,6 +19,8 @@ module.exports = class MenuWidget extends CrowdControl.Views.Form
 
   # Placeholder Text
   filterPlaceholder: 'Type Something'
+
+  options: []
 
   #
   # In the form of:
@@ -35,7 +44,11 @@ module.exports = class MenuWidget extends CrowdControl.Views.Form
 
     super
 
-    @inputs.filter.on 'change', ()=>
+    @on 'update', =>
+      @options = filter @data.get('options'), @data.get 'filter'
+
+    @inputs.filter.on 'change', =>
       @update()
 
-
+  noResults: ->
+    return @options.length == 0

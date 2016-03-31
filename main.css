@@ -90,7 +90,7 @@ daisho-table-widget daisho-table-row{
 daisho-table-widget .table-row > *,
 daisho-table-widget daisho-table-row > *{
   position:relative;
-  line-height:3.5em;
+  line-height:4em;
 }
 daisho-table-widget .table-row > *:first-child,
 daisho-table-widget daisho-table-row > *:first-child{
@@ -153,4 +153,29 @@ daisho-table-widget .table-body daisho-table-row > *:first-child:after{
 daisho-table-widget .table-body .table-row > *:last-child:after,
 daisho-table-widget .table-body daisho-table-row > *:last-child:after{
   right:32px;
+}
+daisho-menu-widget{
+  display:block;
+  padding-bottom:15px;
+}
+daisho-menu-widget daisho-inline-text-control{
+  height:60px;
+  display:block;
+  padding:17px 20px;
+}
+daisho-menu-widget daisho-inline-text-control input{
+  width:100%;
+  font-size:1.2em;
+  border:0;
+  outline:none;
+}
+daisho-menu-widget > ul{
+  overflow-y:scroll;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+daisho-menu-widget > ul > li{
+  padding:20px;
+  cursor:pointer;
 }/*# sourceMappingURL=main.css.map */
