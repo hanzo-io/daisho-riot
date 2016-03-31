@@ -5,7 +5,7 @@ module.exports =
   #Generic Control
   Control:          require './control'
   Text:             require './text'
-  Filter:           require './filter'
+  InlineText:       require './inline-text'
 
   #Static Fields
   StaticText:       require './static-text'
@@ -14,7 +14,7 @@ module.exports =
 
   register: (m)->
     @Text.register(m)
-    @Filter.register(m)
+    @InlineText.register(m)
 
     @StaticText.register(m)
     @StaticDate.register(m)

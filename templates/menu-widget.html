@@ -1,0 +1,4 @@
+<daisho-inline-text-control lookup="filter" if="{ filter }" placeholder="{ filterPlaceholder }"></daisho-inline-text-control>
+<ul>
+  <li each="{ option, i in data.get('options') }" onclick="{ option.action }">{ option.name }</li>
+</ul>

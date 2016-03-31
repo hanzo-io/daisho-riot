@@ -16,11 +16,17 @@ module.exports = class MenuWidget extends CrowdControl.Views.Form
   #
   # In the form of:
   #
-  # options:
-  #   Option: (event)->
-  #     // Do a thing
+  # data: refer
+  #     filter: 'filter field'
+  #     options: [
+  #         {
+  #             name:   "display name"
+  #             action: (event)->
+  #             // Do a thing
+  #         }
+  #     ]
   #
-  options: {}
+  data: []
 
   html: require '../../templates/menu-widget.html'
 
@@ -31,3 +37,5 @@ module.exports = class MenuWidget extends CrowdControl.Views.Form
 
     @inputs.filter.on 'change', ()=>
       @update()
+
+
