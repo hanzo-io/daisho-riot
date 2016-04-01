@@ -1,0 +1,7 @@
+<daisho-inline-text-control lookup="filter" if="{ filter }" placeholder="{ filterPlaceholder }" realtime="true"></daisho-inline-text-control>
+<ul>
+  <li each="{ option, i in options }" onclick="{ option.action }">
+    <daisho-poly-control lookup="{ option.id }" tag="{ option.tag }"></daisho-poly-control>
+  </li>
+  <li class="no-results" if="{ noResults() }">No Search Results</li>
+</ul>

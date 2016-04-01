@@ -1,14 +1,8 @@
 CrowdControl = require 'crowdcontrol'
 refer = require 'referential'
+{ filter } = require '../utils/menu'
 
-filter = (options, filter)->
-  ret = []
-  for option in options
-    ret.push(option) if (option.name.indexOf filter) > -1
-
-  return ret
-
-module.exports = class MenuWidget extends CrowdControl.Views.Form
+module.exports = class Menu extends CrowdControl.Views.Form
   tag: 'daisho-menu-widget'
 
   configs:
@@ -23,29 +17,38 @@ module.exports = class MenuWidget extends CrowdControl.Views.Form
   options: []
 
   #
+  # Data for constructing the filter menu
+  # In the form of:
+  #
+  # filterData: refer
+  #     options: [
+  #         {
+  #             name:   'Display Name'
+  #             action: (event)->
+  #                 // Do a thing
+  #         }
+  #     ]
+  #
+  filterData: null
+
+  #
   # In the form of:
   #
   # data: refer
   #     filter: 'filter field'
-  #     options: [
-  #         {
-  #             name:   "display name"
-  #             action: (event)->
-  #             // Do a thing
-  #         }
-  #     ]
   #
-  data: []
+  data: null
 
   html: require '../../templates/menu-widget.html'
 
   init: ()->
-    @data = refer { filter: '' } if !@data?
+    @data = refer { filter: ''} if !@data?
+    @filterData = refer { options: [] } if !@filterData?
 
     super
 
     @on 'update', =>
-      @options = filter @data.get('options'), @data.get 'filter'
+      @options = filter @filterData.get('options'), @data.get 'filter'
 
     @inputs.filter.on 'change', =>
       @update()

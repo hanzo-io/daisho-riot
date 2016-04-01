@@ -1,5 +1,5 @@
 module.exports =
-  TableRow: require './table-row'
+  TableRow:         require './table-row'
 
   register: ()->
     @TableRow.register()

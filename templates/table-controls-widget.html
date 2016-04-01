@@ -1,0 +1,21 @@
+<div class="table-filter-summary">
+  <span class="table-filter-count">
+    { countWords() }
+  </span>
+  <span>sorted by</span>
+  <span class="table-filter-sort">
+    { sortWords() }
+  </span>
+</div>
+<input id="table-column-button" class="menu-toggle" type="checkbox">
+<label class="table-filter-option button" for="table-column-button">
+  Columns
+</label>
+<input id="table-filter-button" class="menu-toggle" type="checkbox">
+<label class="table-filter-option button" for="table-filter-button" onclick="{ resetMenus }">
+  <span>Filters</span>
+  <div class="menu" onclick="{ ignore }">
+    <div class="menu-title">Filters</div>
+    <daisho-table-filter-menu-widget data="{ data }" filter-data="{ filterData }" filter-placeholder="Find a Filter"></daisho-table-filter-menu-widget>
+  </div>
+</label>

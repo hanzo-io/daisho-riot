@@ -45,6 +45,7 @@ button,
   outline:none;
   -webkit-transition:all 0.5s ease;
   transition:all 0.5s ease;
+  cursor:pointer;
 }
 button.disabled,
 .button.disabled,
@@ -90,7 +91,7 @@ daisho-table-widget daisho-table-row{
 daisho-table-widget .table-row > *,
 daisho-table-widget daisho-table-row > *{
   position:relative;
-  line-height:4em;
+  line-height:3.8em;
 }
 daisho-table-widget .table-row > *:first-child,
 daisho-table-widget daisho-table-row > *:first-child{
@@ -154,28 +155,33 @@ daisho-table-widget .table-body .table-row > *:last-child:after,
 daisho-table-widget .table-body daisho-table-row > *:last-child:after{
   right:32px;
 }
-daisho-menu-widget{
+daisho-menu-widget,
+daisho-table-filter-menu-widget{
   display:block;
   padding-bottom:15px;
 }
-daisho-menu-widget daisho-inline-text-control{
+daisho-menu-widget daisho-inline-text-control,
+daisho-table-filter-menu-widget daisho-inline-text-control{
   height:60px;
   display:block;
   padding:17px 20px;
 }
-daisho-menu-widget daisho-inline-text-control input{
+daisho-menu-widget daisho-inline-text-control input,
+daisho-table-filter-menu-widget daisho-inline-text-control input{
   width:100%;
-  font-size:1.2em;
+  font-size:1.1em;
   border:0;
   outline:none;
 }
-daisho-menu-widget > ul{
+daisho-menu-widget > ul,
+daisho-table-filter-menu-widget > ul{
   overflow-y:scroll;
   list-style:none;
   padding:0;
   margin:0;
 }
-daisho-menu-widget > ul > li{
+daisho-menu-widget > ul > li,
+daisho-table-filter-menu-widget > ul > li{
   padding:20px;
   cursor:pointer;
 }/*# sourceMappingURL=main.css.map */

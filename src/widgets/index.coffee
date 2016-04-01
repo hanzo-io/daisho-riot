@@ -1,7 +1,11 @@
 module.exports =
-  TableWidget:  require './table'
-  MenuWidget:   require './menu'
+  Table:            require './table'
+  TableControls:     require './table-controls'
+  Menu:             require './menu'
+  TableFilterMenu:  require './table-filter-menu'
 
   register: ()->
-    @TableWidget.register()
-    @MenuWidget.register()
+    @Table.register()
+    @TableControls.register()
+    @Menu.register()
+    @TableFilterMenu.register()

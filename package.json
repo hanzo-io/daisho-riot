@@ -63,6 +63,8 @@
   "dependencies": {
     "broken": "0.1.4",
     "crowdcontrol": "2.0.13",
+    "is-object": "1.0.1",
+    "jquery": "2.2.2",
     "moment": "2.12.0",
     "raf": "3.2.0",
     "riot": "2.3.17"
