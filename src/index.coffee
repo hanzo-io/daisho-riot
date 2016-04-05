@@ -1,5 +1,9 @@
 Controls = require './controls'
 
+if window?
+  window.$ = require 'jquery'
+  require 'selectize'
+
 module.exports =
   RiotPage: require './page'
   Events:   require './events'

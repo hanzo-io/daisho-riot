@@ -23,7 +23,7 @@ module.exports = class Menu extends CrowdControl.Views.Form
   # filterData: refer
   #     options: [
   #         {
-  #             name:   'Display Name'
+  #             name:   'Display/Filter Name'
   #             action: (event)->
   #                 // Do a thing
   #         }

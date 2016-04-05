@@ -1,12 +1,15 @@
 Text = require './text'
-riot = require 'riot'
+riot = require('crowdcontrol').riot.riot
 isObject = require 'is-object'
 requestAnimationFrame = require 'raf'
+
+$ = require 'jquery'
+selectize = require 'selectize'
 
 isABrokenBrowser = (window.navigator.userAgent.indexOf('MSIE') > 0 || window.navigator.userAgent.indexOf('Trident') > 0)
 
 module.exports = class Select extends Text
-  tag: 'select-control'
+  tag: 'daisho-select-control'
   html: require '../../templates/controls/select.html'
   tags: false
   min: 10

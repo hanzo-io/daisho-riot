@@ -2,7 +2,7 @@ Menu = require './menu'
 
 module.exports = class TableFilterMenu extends Menu
   tag: 'daisho-table-filter-menu-widget'
-  # should get this from parent
+
   configs:
     filter: null
 
@@ -11,7 +11,7 @@ module.exports = class TableFilterMenu extends Menu
   #
   # data: refer
   #     filter: 'filter field'
-  #     ... other field ...
+  #     ... other fields ...
   #
   data: null
 
@@ -22,11 +22,12 @@ module.exports = class TableFilterMenu extends Menu
   # filterData: refer
   #     options: [
   #         {
-  #             name:   'Display Name'
+  #             name:   'Display/Filter Name'
   #             id:     'Data Field Id in SearchData'
   #             tag:    'Tag to Mount'
-  #             action: (event)->
-  #                 // Do a thing
+  #             options: {
+  #                 # options to pass into the daisho-poly-control
+  #             }
   #         }
   #     ]
   #
@@ -35,7 +36,4 @@ module.exports = class TableFilterMenu extends Menu
   html: require '../../templates/table-filter-menu-widget.html'
 
   init: ()->
-    @configs.filter = null if !@configs.filter?
-
     super
-

@@ -1,8 +1,7 @@
 {
   Page
 } = require 'daisho-sdk'
-
-riot = require 'riot'
+riot = require('crowdcontrol').riot.riot
 
 module.exports = class RiotPage extends Page
   tagEl:  'tag'

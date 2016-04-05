@@ -1,6 +1,6 @@
 CrowdControl = require 'crowdcontrol'
 Events = require '../events'
-riot = require 'riot'
+riot = require('crowdcontrol').riot.riot
 $ = require 'jquery'
 
 scrolling = false

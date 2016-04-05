@@ -14,7 +14,7 @@ module.exports = class TableControls extends CrowdControl.Views.View
   #
   # data: refer
   #     filter: 'filter field'
-  #     ... other field ...
+  #     ... other fields ...
   #
   data: null
 
@@ -25,11 +25,12 @@ module.exports = class TableControls extends CrowdControl.Views.View
   # filterData: refer
   #     options: [
   #         {
-  #             name:   'Display Name'
+  #             name:   'Display/Filter Name'
   #             id:     'Data Field Id in SearchData'
   #             tag:    'Tag to Mount'
-  #             action: (event)->
-  #                 // Do a thing
+  #             options: {
+  #                 # options to pass into the daisho-poly-control
+  #             }
   #         }
   #     ]
   #
@@ -39,6 +40,8 @@ module.exports = class TableControls extends CrowdControl.Views.View
 
   init: ()->
     @data = refer { filter: ''} if !@data?
+    if !@data.get('filter')?
+      @data.set 'filter', ''
     @filterData = refer { options: [] } if !@filterData?
 
     super
