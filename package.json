@@ -1,6 +1,6 @@
 {
   "name": "daisho-riot",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "riot component for daisho",
   "main": "lib/",
   "scripts": {
